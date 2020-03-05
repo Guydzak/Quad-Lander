@@ -9,7 +9,7 @@ public class UI : MonoBehaviour
     public float timeRemaining = 45.0f; //How much time is remaining.
     public Text timeText; //References the "Time Remaining" UI.
 
-    private void Update()
+    private void Update()     // Update is called once per frame
     {
         timeRemaining -= Time.deltaTime; //Subtracting "Time Remaining" from delta time.
         timeText.text = "Time Remaining: " + timeRemaining; // The text represents the time remaining. These two variables are directly conntected.

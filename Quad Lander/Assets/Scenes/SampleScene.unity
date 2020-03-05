@@ -430,6 +430,7 @@ GameObject:
   - component: {fileID: 776361106}
   - component: {fileID: 776361105}
   - component: {fileID: 776361104}
+  - component: {fileID: 776361108}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -518,6 +519,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &776361108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776361103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb168a71eec7b464fa990a6aa6a89ca0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &954639745
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,6 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954639746}
   - component: {fileID: 954639748}
+  - component: {fileID: 954639749}
   - component: {fileID: 954639747}
   m_Layer: 5
   m_Name: Score Text
@@ -586,7 +607,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: '
+  m_Text: 
 --- !u!222 &954639748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -595,6 +616,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954639745}
   m_CullTransparentMesh: 0
+--- !u!114 &954639749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954639745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a85866e578c764fab323221f521511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 954639747}
 --- !u!1 &1449513529
 GameObject:
   m_ObjectHideFlags: 0
