@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite idle;
     public Sprite right;
     public Sprite left;
+    public CheckGround cG;
     //Floating point variable to store the player's movement speed.
 
     private Rigidbody2D rb2d;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        cG = gameObject.GetComponent<CheckGround>();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -41,5 +44,6 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("TurnLeft", false);
         }
+        
     }
 }

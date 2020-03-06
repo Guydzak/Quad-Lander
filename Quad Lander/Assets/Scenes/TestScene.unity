@@ -655,7 +655,7 @@ PrefabInstance:
     - target: {fileID: 4700421564422468208, guid: 636a14f50f91717409132f387ba6f243,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.44
+      value: -5.06
       objectReference: {fileID: 0}
     - target: {fileID: 4700421564422468208, guid: 636a14f50f91717409132f387ba6f243,
         type: 3}
@@ -1518,7 +1518,7 @@ GameObject:
   - component: {fileID: 1191366198}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e3325df60b6784cbbe0c554e0044e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 5
+  timeRemaining: 60
   timeText: {fileID: 666569066}
   points: {fileID: 338856746}
   cG: {fileID: 0}
@@ -1969,6 +1969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrounded: 0
   points: 0
+  uI: {fileID: 0}
 --- !u!50 &1933180078
 Rigidbody2D:
   serializedVersion: 4
@@ -2032,6 +2033,7 @@ MonoBehaviour:
   idle: {fileID: 0}
   right: {fileID: 0}
   left: {fileID: 0}
+  cG: {fileID: 0}
 --- !u!1001 &2006356117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2057,7 +2059,7 @@ PrefabInstance:
     - target: {fileID: 4700421564422468208, guid: 636a14f50f91717409132f387ba6f243,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.74
+      value: -5.38
       objectReference: {fileID: 0}
     - target: {fileID: 4700421564422468208, guid: 636a14f50f91717409132f387ba6f243,
         type: 3}

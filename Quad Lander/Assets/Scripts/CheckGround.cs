@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckGround : MonoBehaviour
 {
@@ -9,12 +10,14 @@ public class CheckGround : MonoBehaviour
     public bool isGrounded = false;
     public int points;
     Animator anim;
+    public UI uI;
 
 
     void Start()
     {
         points = PlayerPrefs.GetInt("points");
         anim = GetComponent<Animator>();
+        
         
     }
 
@@ -25,6 +28,14 @@ public class CheckGround : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "Normal" || collision.gameObject.tag == "Special")
+        {
+            if(anim.GetBool("TurnRight") == true || anim.GetBool("TurnLeft") == true)
+            {
+                SceneManager.LoadScene("GameOver");//Need to insert the explosion sprite animation and then transition to game over screen.
+            }
+        }
+        
         if (collision.gameObject.tag == "Normal")
         {
             anim.SetBool("Grounded", true);
