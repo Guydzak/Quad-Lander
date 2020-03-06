@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class UI : MonoBehaviour
 
     public void GameOver()
     {
-        Application.Quit();
+        SceneManager.LoadScene("GameOver");
     }
 
 

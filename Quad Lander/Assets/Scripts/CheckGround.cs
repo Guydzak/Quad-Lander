@@ -15,6 +15,7 @@ public class CheckGround : MonoBehaviour
     {
         points = PlayerPrefs.GetInt("points");
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -29,11 +30,13 @@ public class CheckGround : MonoBehaviour
             anim.SetBool("Grounded", true);
             StartCoroutine(normalRepel());
             points += 10;
+            PlayerPrefs.SetInt("points", points);
         }
         else if (collision.gameObject.tag == "Special")
         {
             anim.SetBool("SpecialLanding", true);
             points += 20;
+            PlayerPrefs.SetInt("points", points);
             isGrounded = true;
             Debug.Log("Working");
             StartCoroutine(Change());
