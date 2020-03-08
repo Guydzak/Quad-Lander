@@ -17,11 +17,13 @@ public class Boundary : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Boundary")
-        {
-            SceneManager.LoadScene("GameOver");
-        }
+        if (collision.gameObject.tag == "Boundary")
+
+            {
+                SceneManager.LoadScene("GameOver");//Need to insert the explosion sprite animation and then transition to game over screen.
+            }
+        
     }
 }
