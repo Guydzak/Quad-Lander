@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 1242500528}
   - component: {fileID: 1242500532}
   - component: {fileID: 1242500533}
+  - component: {fileID: 1242500530}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -304,6 +305,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1242500530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242500527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5570e076e2669b84a81eb0cb3e3ddd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltX: 0
+  speed: 10
+  edgeleft: -5
+  edgeRight: 5
 --- !u!4 &1242500531
 Transform:
   m_ObjectHideFlags: 0
