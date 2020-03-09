@@ -2051,6 +2051,7 @@ GameObject:
   - component: {fileID: 1933180080}
   - component: {fileID: 1933180081}
   - component: {fileID: 1933180077}
+  - component: {fileID: 1933180082}
   m_Layer: 0
   m_Name: Quadcopter
   m_TagString: Player
@@ -2232,6 +2233,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babb71b521a111346b674382a951973b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1933180082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933180073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5570e076e2669b84a81eb0cb3e3ddd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltX: 2
+  speed: 10
+  edgeleft: -10
+  edgeRight: 10
 --- !u!1001 &2006356117
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -19,6 +19,6 @@ public class Tilt : MonoBehaviour
     void Update()
     {
         tiltX = Input.acceleration.x * speed;
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, edgeleft, edgeRight), transform.position.y);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, edgeleft, edgeRight), transform.position.y, -1);
     }
 }
