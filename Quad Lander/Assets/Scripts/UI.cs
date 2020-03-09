@@ -11,10 +11,13 @@ public class UI : MonoBehaviour
     public Text timeText; //References the "Time Remaining" UI.
     public Text points; //Displays the points.
     public CheckGround cG;
+    Animator anim;
+    public int t;
 
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         cG = GameObject.FindGameObjectWithTag("Player").GetComponent<CheckGround>();
     }
 
@@ -36,6 +39,14 @@ public class UI : MonoBehaviour
 
     public void GameOver()
     {
+        StartCoroutine(explotion());
+        anim.SetBool("Explosion", true);
+        
+    }
+
+    IEnumerator explotion()
+    {
+        yield return new WaitForSeconds(t);
         SceneManager.LoadScene("GameOver");
     }
 

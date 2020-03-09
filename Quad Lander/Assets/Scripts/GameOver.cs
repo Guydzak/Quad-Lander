@@ -9,6 +9,7 @@ public class GameOver : MonoBehaviour
     
     public Text Score;
     public int score;
+ 
     
     void Start()
     {

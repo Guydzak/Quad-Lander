@@ -11,12 +11,14 @@ public class CheckGround : MonoBehaviour
     public int points;
     Animator anim;
     public UI uI;
+    Rigidbody2D player;
 
 
     void Start()
     {
         points = PlayerPrefs.GetInt("points");
         anim = GetComponent<Animator>();
+        player = GetComponent<Rigidbody2D>();
         
         
     }
@@ -32,7 +34,11 @@ public class CheckGround : MonoBehaviour
         {
             if(anim.GetBool("TurnRight") == true || anim.GetBool("TurnLeft") == true)
             {
-                SceneManager.LoadScene("GameOver");//Need to insert the explosion sprite animation and then transition to game over screen.
+                //player.constraints = RigidbodyConstraints2D.FreezeAll;
+                anim.SetBool("TurnRight", false);
+                anim.SetBool("Turnleft", false);
+                StartCoroutine(explosion());
+                anim.SetBool("Explosion", true);
             }
         }
         
@@ -70,6 +76,12 @@ public class CheckGround : MonoBehaviour
         Debug.Log("Working");
         StartCoroutine(Change());
 
+    }
+
+    IEnumerator explosion()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("GameOver");//Need to insert the explosion sprite animation and then transition to game over screen.
     }
 
 }

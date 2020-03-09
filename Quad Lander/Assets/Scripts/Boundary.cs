@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Boundary : MonoBehaviour
 {
+    public Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,8 +24,17 @@ public class Boundary : MonoBehaviour
         if (collision.gameObject.tag == "Boundary")
 
             {
-                SceneManager.LoadScene("GameOver");//Need to insert the explosion sprite animation and then transition to game over screen.
-            }
+            StartCoroutine(explotion());
+            anim.SetBool("TurnRight", false);
+            anim.SetBool("Turnleft", false);
+            anim.SetBool("Explosion", true);
+        }
         
+    }
+
+    IEnumerator explotion()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("GameOver");
     }
 }
