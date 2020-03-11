@@ -24,22 +24,21 @@ public class Tilt : MonoBehaviour
         curPositon.x = rb.transform.position.x;
         tiltX = Input.acceleration.x * speed;
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, edgeleft, edgeRight), transform.position.y, -1);
-        if(Input.acceleration.x > 0.1f)
+        if (Input.acceleration.x > 0.1f)
         {
             anim.SetBool("TurnRight", true);
         }
+
+        else if (Input.acceleration.x < -0.1f)
+        {
+            anim.SetBool("TurnLeft", true);
+
+        }
+
         else
         {
             anim.SetBool("TurnRight", false);
-        }
-       
-        if(Input.acceleration.x < -0.1f)
-        {
-            anim.SetBool("TurnLeft", true);
-        }
-        else
-        {
-            anim.SetBool("Turnleft", false);
+            anim.SetBool("TurnLeft", false);
         }
         
         
